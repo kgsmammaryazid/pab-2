@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    tools:context=".InsertActivity">
+
+    <TextView
+        android:id="@+id/tvInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukan Buku"
+        android:textAlignment="center"
+        android:textColor="#f8bbd0"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvInsert"
+        app:layout_constraintTop_toBottomOf="@id/tvInsert">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Nomor ISBN :"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etISBN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="ISBN"
+            android:textAlignment="center"
+            android:textColor="#f8bbd0"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:imeOptions="actionNext"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvInsert"
+        app:layout_constraintTop_toBottomOf="@id/ll1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Judul Buku :"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etJudul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Judul"
+            android:textAlignment="center"
+            android:textColor="#f8bbd0"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvInsert"
+        app:layout_constraintTop_toBottomOf="@id/ll2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Kategori Buku :"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etKategori"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Kategori"
+            android:textAlignment="center"
+            android:textColor="#f8bbd0"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvInsert"
+        app:layout_constraintTop_toBottomOf="@id/ll3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Deskripsi Buku :"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etDeskripsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Deskripsi"
+            android:textAlignment="center"
+            android:textColor="#f8bbd0"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvInsert"
+        app:layout_constraintTop_toBottomOf="@id/ll4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Harga Buku :"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etHarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Harga"
+            android:textAlignment="center"
+            android:textColor="#f8bbd0"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:imeOptions="actionDone"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#f8bbd0"
+        android:text="Insert"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
